@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+     
+    <style>
+        .main-font{
+            font-family: 'Castoro', serif;
+        }
+        .logo-font{
+            font-family: 'Arizonia', cursive;
+            font-weight:400 ;
+            letter-spacing: 1px;
+            font-size: 3rem;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#F9F9F9] main-font">
+<nav class="sticky bg-[#FBCC54] lg:flex lg:flex-row lg:justify-around lg:items-center lg:p-3 text-white lg:text-xl lg:font-semibold h-20 px-4 py-4">
+<p class="logo-font">Elegance</p>
+
+<div class="lg:flex-row lg:justify-end lg:space-x-20"><a href="index.html" class="text-[#FFFFFF]  transition-colors duration-200 text-2xl ">
+      Shop</a>
+<a href="" class="text-[#FFFFFF]  transition-colors duration-200  ">
+      About</a>
+<a href="" class="text-[#FFFFFF]  transition-colors duration-200  ">
+      FAQs</a>
+<a href="" class="text-[#FFFFFF]  transition-colors duration-200   ">
+      Contact</a></div>
+</nav>
+
+
+<form class="mx-16 my-6">   
+    <label for="search" class="block mb-2.5 text-sm font-medium text-heading sr-only ">Search</label>
+    <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
+        </div>
+        <input type="search" id="search" class="block w-full p-3 ps-9 bg-neutral-secondary-medium border border-gray-300 text-heading text-sm rounded-md shadow-xs placeholder:text-body focus:border-yellow-400 focus:ring-yellow-400 transition-all duration-200 focus:w-[101%]" placeholder="Search" />
+
+    </div>
+</form>
+
+
+<h2 class="text-center text-2xl font-semibold text-[#C68E00] my-6"> Top rated products</h2>
+
+<div id="product-carousel"  class="relative w-full  max-w-4xl mx-auto" data-carousel="slide">
+
+<div  class="relative h-60 overflow-hidden rounded-xl">
+<div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="relative h-full w-full">
+          <img src="assets/slider.png" alt="${product.title}" class="object-cover w-full h-full rounded-md bg-[#FBCC54]">
+          <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-lg font-semibold">Hoodies</h3>
+            <p class="text-sm opacity-80">Women clothes</p>
+          </div>
+          <div class="absolute bottom-4 right-4 text-white text-lg font-semibold">
+            $15
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="relative h-full w-full">
+          <img src="assets/slider.png" alt="${product.title}" class="object-cover w-full h-full rounded-md bg-[#FBCC54]">
+          <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-lg font-semibold">Hoodies</h3>
+            <p class="text-sm opacity-80">Women clothes</p>
+          </div>
+          <div class="absolute bottom-4 right-4 text-white text-lg font-semibold">
+            $15
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="relative h-full w-full">
+          <img src="assets/slider.png" alt="${product.title}" class="object-cover w-full h-full rounded-md bg-[#FBCC54]">
+          <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
+          <div class="absolute bottom-4 left-4 text-white">
+            <h3 class="text-lg font-semibold">Hoodies</h3>
+            <p class="text-sm opacity-80">Women clothes</p>
+          </div>
+          <div class="absolute bottom-4 right-4 text-white text-lg font-semibold">
+            $15
+          </div>
+        </div>
+      </div>
+      
+</div>
+<div class="flex justify-center space-x-2 mt-3">
+<button type="button" class="w-10 h-3 rounded-full bg-[#FBCC54]"  data-carousel-slide-to="0"></button>
+
+<button type="button" class="w-3 h-3 rounded-full bg-[#919090]" data-carousel-slide-to="1"></button>  
+
+<button type="button" class="w-3 h-3 rounded-full bg-[#919090]" data-carousel-slide-to="2"></button>
+</div>
+</div>
+
+
+<div class="flex flex-row justify-between items-center mx-16">
+  <h2 class="text-2xl font-semibold text-[#333333] my-6 "> Products</h2>
+
+  <div class="relative inline-block">
+      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" data-dropdown-placement="bottom" data-dropdown-trigger="click" class="inline-flex items-center justify-center text-[#333333] bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-2 focus:ring-yellow-400 shadow-md font-medium leading-5 rounded-md text-sm px-4 py-2.5 focus:outline-none" type="button">
+  Filter by category
+  <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m19 9-7 7-7-7"/></svg>
+</button>
+
+<div id="dropdown" class="z-10 hidden w-50 max-h-60 overflow-y-auto bg-white border border-gray-200 rounded-xl shadow-lg mt-2">
+    <ul id="categoryDropDown" class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDefaultButton">
+    
+    </ul>
+</div>
+</div>
+</div>
+
+ <div id="cardsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-6 lg:mx-auto ">   
+  </div>
+  <div class="mt-4"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js">
+ 
+</script>
+ <script src="operations.js" defer></script>
+</body>
+</html>
